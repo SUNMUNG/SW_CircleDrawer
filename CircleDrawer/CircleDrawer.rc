@@ -1,0 +1,88 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+#include "afxres.h"
+#undef APSTUDIO_READONLY_SYMBOLS
+
+LANGUAGE LANG_KOREAN, SUBLANG_KOREAN
+
+IDR_MAINFRAME   ICON    "res\\CircleDrawer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+// About dialog
+IDD_ABOUTBOX DIALOGEX 0, 0, 200, 70
+CAPTION "About CircleDrawer"
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 9, "Segoe UI"
+BEGIN
+    LTEXT           "CircleDrawer v1.0",IDC_STATIC,40,10,150,8,SS_NOPREFIX
+    LTEXT           "Three-Point Circle Drawer",IDC_STATIC,40,25,150,8
+    DEFPUSHBUTTON   "OK",IDOK,143,49,50,14,WS_GROUP
+END
+
+/////////////////////////////////////////////////////////////////////////////
+// Main Dialog
+// Placeholder English text overridden with Korean via SetWindowText in OnInitDialog.
+IDD_MAINDIALOG DIALOGEX 0, 0, 490, 295
+CAPTION "Circle Drawer"
+STYLE DS_SETFONT | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+FONT 9, "Segoe UI", 400, 0, 0x1
+BEGIN
+    LTEXT           "Dot radius:",IDC_LABEL_DOT_RADIUS,348,14,95,10
+    EDITTEXT        IDC_EDIT_DOT_RADIUS,348,28,55,13,ES_AUTOHSCROLL
+    LTEXT           "Circle thickness:",IDC_LABEL_LINE_WIDTH,348,52,95,10
+    EDITTEXT        IDC_EDIT_LINE_WIDTH,348,66,55,13,ES_AUTOHSCROLL
+    LTEXT           "Coordinates:",IDC_LABEL_COORD_HEADER,348,96,130,10
+    LTEXT           "P1:",IDC_LABEL_P1,348,112,20,10
+    LTEXT           "",IDC_STATIC_P1,370,112,115,10
+    LTEXT           "P2:",IDC_LABEL_P2,348,128,20,10
+    LTEXT           "",IDC_STATIC_P2,370,128,115,10
+    LTEXT           "P3:",IDC_LABEL_P3,348,144,20,10
+    LTEXT           "",IDC_STATIC_P3,370,144,115,10
+    PUSHBUTTON      "Reset",IDC_BTN_RESET,348,215,80,22
+    PUSHBUTTON      "Random Move",IDC_BTN_RANDOM,348,248,80,22
+END
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+// Version information
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 1,0,0,1
+PRODUCTVERSION 1,0,0,1
+FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+FILEFLAGS 0x1L
+#else
+FILEFLAGS 0x0L
+#endif
+FILEOS 0x4L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204b0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CircleDrawer Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CircleDrawer\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024\0"
+            VALUE "OriginalFilename", "CircleDrawer.exe\0"
+            VALUE "ProductName", "CircleDrawer Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+#endif
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#include "res\\CircleDrawer.rc2"
+#endif
